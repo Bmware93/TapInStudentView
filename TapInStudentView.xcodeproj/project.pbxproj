@@ -8,19 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		1A26F10529A2C9590034E78F /* TapInStudentLoginApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A26F10429A2C9590034E78F /* TapInStudentLoginApp.swift */; };
-		1A26F10729A2C9590034E78F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A26F10629A2C9590034E78F /* ContentView.swift */; };
+		1A26F10729A2C9590034E78F /* SignUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A26F10629A2C9590034E78F /* SignUpScreen.swift */; };
 		1A26F10929A2C95A0034E78F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A26F10829A2C95A0034E78F /* Assets.xcassets */; };
 		1A26F10C29A2C95A0034E78F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A26F10B29A2C95A0034E78F /* Preview Assets.xcassets */; };
 		1A26F11329A2E40D0034E78F /* OutlinedTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A26F11229A2E40D0034E78F /* OutlinedTextFieldStyle.swift */; };
+		1A26F11529A4559E0034E78F /* SplashPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A26F11429A4559E0034E78F /* SplashPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1A26F10129A2C9590034E78F /* TapInStudentLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TapInStudentLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A26F10429A2C9590034E78F /* TapInStudentLoginApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapInStudentLoginApp.swift; sourceTree = "<group>"; };
-		1A26F10629A2C9590034E78F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1A26F10629A2C9590034E78F /* SignUpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreen.swift; sourceTree = "<group>"; };
 		1A26F10829A2C95A0034E78F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A26F10B29A2C95A0034E78F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1A26F11229A2E40D0034E78F /* OutlinedTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlinedTextFieldStyle.swift; sourceTree = "<group>"; };
+		1A26F11429A4559E0034E78F /* SplashPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +57,8 @@
 			isa = PBXGroup;
 			children = (
 				1A26F10429A2C9590034E78F /* TapInStudentLoginApp.swift */,
-				1A26F10629A2C9590034E78F /* ContentView.swift */,
+				1A26F10629A2C9590034E78F /* SignUpScreen.swift */,
+				1A26F11429A4559E0034E78F /* SplashPage.swift */,
 				1A26F10829A2C95A0034E78F /* Assets.xcassets */,
 				1A26F10A29A2C95A0034E78F /* Preview Content */,
 			);
@@ -105,7 +108,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1A26F0FC29A2C9590034E78F /* Build configuration list for PBXProject "TapInStudentLogin" */;
+			buildConfigurationList = 1A26F0FC29A2C9590034E78F /* Build configuration list for PBXProject "TapInStudentView" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -141,8 +144,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A26F11329A2E40D0034E78F /* OutlinedTextFieldStyle.swift in Sources */,
-				1A26F10729A2C9590034E78F /* ContentView.swift in Sources */,
+				1A26F10729A2C9590034E78F /* SignUpScreen.swift in Sources */,
 				1A26F10529A2C9590034E78F /* TapInStudentLoginApp.swift in Sources */,
+				1A26F11529A4559E0034E78F /* SplashPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,7 +328,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1A26F0FC29A2C9590034E78F /* Build configuration list for PBXProject "TapInStudentLogin" */ = {
+		1A26F0FC29A2C9590034E78F /* Build configuration list for PBXProject "TapInStudentView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1A26F10D29A2C95A0034E78F /* Debug */,

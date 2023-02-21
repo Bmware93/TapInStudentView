@@ -7,13 +7,12 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct SignUpScreen: View {
     
     @State private var firstName = ""
     @State private var lastName = ""
     @State private var preferredName = ""
     @State private var email = ""
-    @State private var securityQuestionAnswer = ""
     @State private var schoolCode = ""
     
     var body: some View {
@@ -27,10 +26,10 @@ struct ContentView: View {
                 VStack {
                     
                     Spacer()
-                        .frame(height: 40)
+                        .frame(height: 80)
                     
                     Group {
-                        
+                        //Need to add tap gesture to dismiss keyboard
                         Text("Sign Up")
                             .font(.system(.largeTitle, design: .rounded))
                             .fontWeight(.semibold)
@@ -53,20 +52,12 @@ struct ContentView: View {
                     }
                     
                     Group {
-                        //Security Question Hyperlink
-                        TextField("Security Question", text: .constant(""))
-                            .textFieldStyle(OutlinedTextFieldStyle())
-                            .padding(.horizontal, 20)
-                        
-                        TextField("Answer", text: $securityQuestionAnswer)
-                            .textFieldStyle(OutlinedTextFieldStyle())
-                            .padding(.horizontal, 20)
-                        
+                    
                         TextField("School Code", text: $schoolCode)
                             .textFieldStyle(OutlinedTextFieldStyle())
                             .padding(.horizontal, 20)
                     }
-                    
+                    //Tap to continue button
                     Button {
                         print("Button was Tapped")
                         
@@ -83,16 +74,23 @@ struct ContentView: View {
                     Text("Tap to continue")
                         .font(.footnote)
                         .foregroundColor(.gray)
-                        .padding(.bottom)
+                       
+                    
+                    
+                    Spacer()
+                        .frame(height: 50)
                     
                     HStack{
+                        
                         Text("Already have an account?")
                             .font(.callout)
+                            .foregroundColor(.gray)
                         
                         NavigationLink("Sign In", destination: {})
                         
                     }
                     Spacer()
+                        .frame(height: 80)
                     
                 }
                 
@@ -109,7 +107,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        SignUpScreen()
     }
 }
 
