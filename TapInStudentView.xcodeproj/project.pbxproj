@@ -57,8 +57,8 @@
 			isa = PBXGroup;
 			children = (
 				1A26F10429A2C9590034E78F /* TapInStudentLoginApp.swift */,
-				1A26F10629A2C9590034E78F /* SignUpScreen.swift */,
 				1A26F11429A4559E0034E78F /* SplashPage.swift */,
+				1A26F10629A2C9590034E78F /* SignUpScreen.swift */,
 				1A26F10829A2C95A0034E78F /* Assets.xcassets */,
 				1A26F10A29A2C95A0034E78F /* Preview Content */,
 			);

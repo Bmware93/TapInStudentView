@@ -87,7 +87,7 @@ struct SignUpScreen: View {
                             .foregroundColor(.gray)
                         
                         NavigationLink("Sign In", destination: {})
-                        
+                            .foregroundColor(Color("Gradiant1"))
                     }
                     Spacer()
                         .frame(height: 80)
