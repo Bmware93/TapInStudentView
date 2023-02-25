@@ -86,7 +86,7 @@ struct SignUpScreen: View {
                             .font(.callout)
                             .foregroundColor(.gray)
                         
-                        NavigationLink("Sign In", destination: {})
+                        NavigationLink("Sign In", destination: StudentLockScreen())
                             .foregroundColor(Color("Gradiant1"))
                     }
                     Spacer()
@@ -114,6 +114,7 @@ struct ContentView_Previews: PreviewProvider {
 extension Color {
     static let textFieldBackground = Color("TextFieldColor")
     static let backgroundColor = Color("TapInPrimary")
+  //  static let tapInGradient = LinearGradient(gradient: Gradient(colors: [Color("Gradiant1"), Color("Gradiant2")]), startPoint: .trailing, endPoint: .leading);)
 }
 
 

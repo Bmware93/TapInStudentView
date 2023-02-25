@@ -24,7 +24,7 @@ struct SplashPage: View {
                     Spacer()
                         .frame(height: 150)
                     
-                    NavigationLink(destination: {}) {
+                    NavigationLink(destination: StudentLockScreen()) {
                         Text("Sign In")
                             .frame(minWidth: 0, maxWidth: 300)
                             .padding()
