@@ -10,7 +10,7 @@ import Charts
 
 struct DashBoard: View {
     
-    //MARK: Community poll data
+    //MARK: Survey poll data
     var data: [CommunityPoll] = [
         .init(activity: "Swimming", studentCount: 30, color: "Blue"),
         .init(activity: "Running", studentCount: 10, color: "Gray")
@@ -32,7 +32,7 @@ struct DashBoard: View {
                         
                         Text("Mike's Dashboard")
                             .font(.system(size: 35, design: .rounded).weight(.medium))
-                            .padding(.leading)
+                            .padding(.leading, 20)
                             .padding(.top, 30)
                         
                         
@@ -42,9 +42,9 @@ struct DashBoard: View {
                             Image(systemName: "gearshape.fill")
                                 .font(.system(size: 30))
                                 .foregroundColor(.secondary)
+                                .padding(.top, 25)
                         }
                     }
-                    .padding(.bottom, 20)
                     
                     
                     Button {
@@ -54,8 +54,8 @@ struct DashBoard: View {
                         Image("SplashPageLogo")
                             .resizable()
                             .scaledToFit()
-                            .padding(10)
-                            .frame(width: 300, height: 300)
+                            .padding(20)
+                            .frame(width: 300, height: 290)
                     }
                     
                     Text("Complete your daily Tap In to view your survey results")
@@ -67,6 +67,7 @@ struct DashBoard: View {
                     
                     Spacer()
                     
+                    //MARK: Survey Section
                     Text("Community Poll")
                         .font(.title2)
                         .padding(.top, 30)
@@ -77,18 +78,23 @@ struct DashBoard: View {
                         .foregroundStyle(by: .value("Activity Color", CommunityPoll.color))
                         .cornerRadius(20)
                         
-                        
                     }
                     .chartForegroundStyleScale(["Blue": .blue, "Gray": .gray])
                     .chartXAxis(.hidden)
-                    .frame(width: 290, height: 130)
+                    .frame(width: 333, height: 130)
                     .chartPlotStyle { plotcontent in
                         plotcontent
                             .background(.white.opacity(0.3))
                             .border(.white, width: 3)
+                        
+                            
                     }
                     
                     Spacer()
+                    
+                    Text("90% of your community prefers swimming")
+                        .font(.caption)
+                        .foregroundColor(.secondary)
                     
                     Button {
                         print("Button was pressed")
@@ -103,18 +109,17 @@ struct DashBoard: View {
                             .cornerRadius(40)
                             .font(.title3)
                     }
-                    .padding()
+                    .padding(.top, 30)
                     
                     NavigationLink("Sign Out", destination: {})
                         .bold()
                         .foregroundColor(Color("Gradiant1"))
-                    
-                    
+                        .padding(.top)
                     
                     
                 }
                 
-                //Spacer()
+                
             }
         }
     }
