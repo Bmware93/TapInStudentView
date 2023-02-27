@@ -23,78 +23,76 @@ struct SignUpScreen: View {
                 Color("TapInPrimary")
                     .ignoresSafeArea(.all)
                 
-                VStack {
+            VStack {
+                
+                Spacer()
+                    .frame(height: 80)
+                
+                Group {
+                    //Need to add tap gesture to dismiss keyboard
+                    Text("Sign Up")
+                        .font(.system(.largeTitle, design: .rounded))
+                        .fontWeight(.semibold)
                     
-                    Spacer()
-                        .frame(height: 80)
+                    TextField("First Name", text: $firstName)
+                        .textFieldStyle(OutlinedTextFieldStyle())
+                        .padding(.horizontal, 20)
                     
-                    Group {
-                        //Need to add tap gesture to dismiss keyboard
-                        Text("Sign Up")
-                            .font(.system(.largeTitle, design: .rounded))
-                            .fontWeight(.semibold)
-                        
-                        TextField("First Name", text: $firstName)
-                            .textFieldStyle(OutlinedTextFieldStyle())
-                            .padding(.horizontal, 20)
-                        
-                        TextField("Last Name", text: $lastName)
-                            .textFieldStyle(OutlinedTextFieldStyle())
-                            .padding(.horizontal, 20)
-                        
-                        TextField("Preferred Name", text: $preferredName)
-                            .textFieldStyle(OutlinedTextFieldStyle())
-                            .padding(.horizontal, 20)
-                        
-                        TextField("Email", text: $email)
-                            .textFieldStyle(OutlinedTextFieldStyle())
-                            .padding(.horizontal, 20)
-                    }
+                    TextField("Last Name", text: $lastName)
+                        .textFieldStyle(OutlinedTextFieldStyle())
+                        .padding(.horizontal, 20)
                     
-                    Group {
+                    TextField("Preferred Name", text: $preferredName)
+                        .textFieldStyle(OutlinedTextFieldStyle())
+                        .padding(.horizontal, 20)
                     
-                        TextField("School Code", text: $schoolCode)
-                            .textFieldStyle(OutlinedTextFieldStyle())
-                            .padding(.horizontal, 20)
-                    }
-                    //Tap to continue button
-                    Button {
-                        print("Button was Tapped")
-                        
-                    } label: {
-                        Image("TapInLogo")
-                            .resizable()
-                            .frame(width: 120, height: 110)
-                            .scaledToFit()
-                    }
-                    
-                    .padding(.top)
-                    
-                       
-                    Text("Tap to continue")
-                        .font(.footnote)
-                        .foregroundColor(.gray)
-                       
-                    
-                    
-                    Spacer()
-                        .frame(height: 50)
-                    
-                    HStack{
-                        
-                        Text("Already have an account?")
-                            .font(.callout)
-                            .foregroundColor(.gray)
-                        
-                        NavigationLink("Sign In", destination: StudentLockScreen())
-                            .foregroundColor(Color("Gradiant1"))
-                    }
-                    Spacer()
-                        .frame(height: 80)
-                    
+                    TextField("Email", text: $email)
+                        .textFieldStyle(OutlinedTextFieldStyle())
+                        .padding(.horizontal, 20)
                 }
                 
+                Group {
+                    
+                    TextField("School Code", text: $schoolCode)
+                        .textFieldStyle(OutlinedTextFieldStyle())
+                        .padding(.horizontal, 20)
+                }
+                //Tap to continue button
+                Button {
+                    print("Button was Tapped")
+                    
+                } label: {
+                    Image("TapInLogo")
+                        .resizable()
+                        .frame(width: 120, height: 110)
+                        .scaledToFit()
+                }
                 
+                .padding(.top)
+                
+                
+                Text("Tap to continue")
+                    .font(.footnote)
+                    .foregroundColor(.gray)
+                
+                
+                
+                Spacer()
+                    .frame(height: 50)
+                
+                HStack{
+                    
+                    Text("Already have an account?")
+                        .font(.callout)
+                        .foregroundColor(.gray)
+                    
+                    NavigationLink("Sign In", destination: StudentLockScreen())
+                        .foregroundColor(Color("Gradiant1"))
+                }
+                Spacer()
+                    .frame(height: 80)
+                
+            }
                
                 
             }

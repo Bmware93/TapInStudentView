@@ -11,7 +11,8 @@ import SwiftUI
 struct TapInStudentLoginApp: App {
     var body: some Scene {
         WindowGroup {
-            SignUpScreen()
+            SplashPage()
+            //SignUpScreen()
         }
     }
 }
