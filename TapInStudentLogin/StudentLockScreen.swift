@@ -132,7 +132,13 @@ struct LockScreen : View {
                 
                 ForEach(1...9,id: \.self){value in
                     
-                    PasswordButton(value: "\(value)",password: $password, key: $key, unlocked: $unLocked, wrongPass: $wrongPassword)
+                    ZStack{
+                        Circle()
+                            .stroke(.black, lineWidth: 2)
+                        Text("\(value)")
+                    }
+                    
+//                    PasswordButton(value: "\(value)",password: $password, key: $key, unlocked: $unLocked, wrongPass: $wrongPassword)
                 }
                 
                 PasswordButton(value: "delete.fill",password: $password, key: $key, unlocked: $unLocked, wrongPass: $wrongPassword)

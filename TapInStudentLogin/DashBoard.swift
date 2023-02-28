@@ -10,10 +10,13 @@ import Charts
 
 struct DashBoard: View {
     
+    @State private var tapInSheetShowing = false
+    @State private var settingsSheetShowing  = false
+    
     //MARK: Survey poll data
     var data: [CommunityPoll] = [
-        .init(activity: "Swimming", studentCount: 30, color: "Blue"),
-        .init(activity: "Running", studentCount: 10, color: "Gray")
+        .init(activity: "Swimming", studentCount: 4, color: "Swimming"),
+        .init(activity: "Running", studentCount: 1, color: "Running")
     ]
     
     
@@ -27,7 +30,6 @@ struct DashBoard: View {
                 
                 VStack{
                     
-                    
                     HStack(alignment:.center ,spacing: 20) {
                         
                         Text("Mike's Dashboard")
@@ -37,7 +39,8 @@ struct DashBoard: View {
                         
                         
                         Button {
-                            print("Button was Tapped")
+                            settingsSheetShowing.toggle()
+                            
                         } label: {
                             Image(systemName: "gearshape.fill")
                                 .font(.system(size: 30))
@@ -45,6 +48,11 @@ struct DashBoard: View {
                                 .padding(.top, 25)
                         }
                     }
+                    
+                    .sheet(isPresented: $settingsSheetShowing) {
+                            Text("Students Settings View")
+                        
+                        }
                     
                     
                     Button {
@@ -79,15 +87,14 @@ struct DashBoard: View {
                         .cornerRadius(20)
                         
                     }
-                    .chartForegroundStyleScale(["Blue": .blue, "Gray": .gray])
+                    .chartForegroundStyleScale(["Swimming":.blue, "Running": .gray])
                     .chartXAxis(.hidden)
                     .frame(width: 333, height: 130)
                     .chartPlotStyle { plotcontent in
                         plotcontent
                             .background(.white.opacity(0.3))
-                            .border(.white, width: 3)
+                        .border(.white, width: 3)
                         
-                            
                     }
                     
                     Spacer()
@@ -96,9 +103,9 @@ struct DashBoard: View {
                         .font(.caption)
                         .foregroundColor(.secondary)
                     
+                    
                     Button {
-                        print("Button was pressed")
-                        
+                        tapInSheetShowing.toggle()
                     } label: {
                         Text("Request a chat")
                             .frame(minWidth: 0, maxWidth: 300)
@@ -116,10 +123,15 @@ struct DashBoard: View {
                         .foregroundColor(Color("Gradiant1"))
                         .padding(.top)
                     
-                    
                 }
-                
-                
+           
+            
+            }
+            .sheet(isPresented: $tapInSheetShowing) {
+                TapInView
+                    .presentationDetents([.medium])
+                    .presentationDragIndicator(.visible)
+        
             }
         }
     }
@@ -136,4 +148,38 @@ struct CommunityPoll: Identifiable {
     var activity: String
     var studentCount: Int
     var color: String
+}
+
+var TapInView: some View {
+    VStack {
+        
+       
+        
+        Text("I want to talk to someone")
+            .font(.system(size: 36, design: .rounded) .weight (.semibold))
+            .padding(.bottom)
+            //.frame(width: 240)
+            
+        Text("This will notify your teacher that you want to chat about how you're doing.")
+            .font(.caption)
+            .foregroundColor(.secondary)
+            .frame(width: 230)
+            .padding(.bottom,20)
+        
+        Button {
+           print("Button was tapped")
+            
+        } label: {
+            Text("Confirm")
+                .frame(minWidth: 0, maxWidth: 300)
+                .padding()
+                .padding(.horizontal, -15)
+                .foregroundColor(.white)
+                .background(LinearGradient(gradient: Gradient(colors: [Color("Gradiant1"), Color("Gradiant2")]), startPoint: .trailing, endPoint: .leading))
+                .cornerRadius(40)
+                .font(.title3)
+        }
+        
+    
+    }
 }
