@@ -84,7 +84,7 @@ struct SignUpScreen: View {
                     
                     Text("Already have an account?")
                         .font(.callout)
-                        .foregroundColor(.gray)
+                        .foregroundColor(.secondary)
                     
                     NavigationLink("Sign In", destination: StudentLockScreen())
                         .foregroundColor(Color("Gradiant1"))

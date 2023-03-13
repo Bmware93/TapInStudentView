@@ -15,6 +15,8 @@
 		1A26F11529A4559E0034E78F /* SplashPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A26F11429A4559E0034E78F /* SplashPage.swift */; };
 		1A26F11729A5B3E60034E78F /* StudentLockScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A26F11629A5B3E60034E78F /* StudentLockScreen.swift */; };
 		1A26F11929A7FF870034E78F /* DashBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A26F11829A7FF870034E78F /* DashBoard.swift */; };
+		1A26F13729B1A3EB0034E78F /* RequestAchat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A26F13629B1A3EB0034E78F /* RequestAchat.swift */; };
+		1AFD923729BFA047004CFBB2 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFD923629BFA047004CFBB2 /* Color+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		1A26F11429A4559E0034E78F /* SplashPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPage.swift; sourceTree = "<group>"; };
 		1A26F11629A5B3E60034E78F /* StudentLockScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLockScreen.swift; sourceTree = "<group>"; };
 		1A26F11829A7FF870034E78F /* DashBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoard.swift; sourceTree = "<group>"; };
+		1A26F13629B1A3EB0034E78F /* RequestAchat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestAchat.swift; sourceTree = "<group>"; };
+		1AFD923629BFA047004CFBB2 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,8 @@
 				1A26F10629A2C9590034E78F /* SignUpScreen.swift */,
 				1A26F11629A5B3E60034E78F /* StudentLockScreen.swift */,
 				1A26F11829A7FF870034E78F /* DashBoard.swift */,
+				1A26F13629B1A3EB0034E78F /* RequestAchat.swift */,
+				1AFD923629BFA047004CFBB2 /* Color+Extension.swift */,
 				1A26F10829A2C95A0034E78F /* Assets.xcassets */,
 				1A26F10A29A2C95A0034E78F /* Preview Content */,
 			);
@@ -152,9 +158,11 @@
 				1A26F11329A2E40D0034E78F /* OutlinedTextFieldStyle.swift in Sources */,
 				1A26F11729A5B3E60034E78F /* StudentLockScreen.swift in Sources */,
 				1A26F10729A2C9590034E78F /* SignUpScreen.swift in Sources */,
+				1A26F13729B1A3EB0034E78F /* RequestAchat.swift in Sources */,
 				1A26F10529A2C9590034E78F /* TapInStudentLoginApp.swift in Sources */,
 				1A26F11529A4559E0034E78F /* SplashPage.swift in Sources */,
 				1A26F11929A7FF870034E78F /* DashBoard.swift in Sources */,
+				1AFD923729BFA047004CFBB2 /* Color+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
