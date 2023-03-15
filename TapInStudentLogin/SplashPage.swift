@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct SplashPage: View {
+    
     var body: some View {
+        
         NavigationStack {
             
             ZStack {

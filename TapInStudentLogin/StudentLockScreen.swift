@@ -26,7 +26,7 @@ struct Home : View {
         
         ZStack{
             
-            Color("TapInPrimary")
+            Color.brandGradientlight2
                 .ignoresSafeArea(.all)
             
             // Lockscreen...
@@ -126,19 +126,14 @@ struct LockScreen : View {
             
             Spacer(minLength: 0)
             
-            LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 3),spacing: height < 750 ? 4 : 15){
+            LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 3),spacing: height < 750 ? 10 : 15){
                 
                 // Password Button ....
                 
                 ForEach(1...9,id: \.self){value in
                     
-                    ZStack{
-                        Circle()
-                            .stroke(.black, lineWidth: 2)
-                        Text("\(value)")
-                    }
                     
-//                    PasswordButton(value: "\(value)",password: $password, key: $key, unlocked: $unLocked, wrongPass: $wrongPassword)
+                   PasswordButton(value: "\(value)",password: $password, key: $key, unlocked: $unLocked, wrongPass: $wrongPassword)
                 }
                 
                 PasswordButton(value: "delete.fill",password: $password, key: $key, unlocked: $unLocked, wrongPass: $wrongPassword)
@@ -207,11 +202,17 @@ struct PasswordButton : View {
                         .foregroundColor(.black)
                 }
                 else{
-                    
-                    Text(value)
-                        .font(.title)
-                        .foregroundColor(.black)
+                    ZStack{
                         
+                        Circle()
+                            .stroke(.black, lineWidth: 2)
+                            .frame(width: 150, height: 60)
+                        
+                        Text(value)
+                            .font(.title)
+                            .foregroundColor(.black)
+                    
+                    }
                 }
             }
             .padding()

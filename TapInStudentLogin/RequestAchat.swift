@@ -18,7 +18,6 @@ struct RequestAchat: View {
     
     var body: some View {
         
-      
                 
                    VStack {
                         
@@ -35,14 +34,14 @@ struct RequestAchat: View {
                             .frame(width: 230)
                             .padding(.bottom, 20)
                         
-                        Group {
+
                             Text("Seleceted Teacher: \(selectedTeacher)")
                             Picker("Pick a language", selection: $selectedTeacher) { // 3
                                 ForEach(teachers, id: \.self) { item in // 4
                                     Text(item) // 5
                                 }
                             }
-                        }
+                       
                         
                         
                         Spacer()

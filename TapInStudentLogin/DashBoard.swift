@@ -9,6 +9,7 @@ import SwiftUI
 import Charts
 
 
+
 struct DashBoard: View {
     
     @State private var tapInSheetShowing = false
@@ -52,9 +53,11 @@ struct DashBoard: View {
                     }
                     
                     .sheet(isPresented: $settingsSheetShowing) {
-                        Text("Students Settings View")
-                        
+                        SettingsSheetView()
+                            .presentationDetents([.large])
+                        .presentationDragIndicator(.visible)
                     }
+                   
                     
                     
                     Button {
@@ -86,7 +89,6 @@ struct DashBoard: View {
                     Chart(data) { CommunityPoll in
                         BarMark(x: .value("Number of Students", CommunityPoll.studentCount),
                                 y: .value("Activity", CommunityPoll.activity))
-                        //.foregroundStyle(by: .value("Activity Color", CommunityPoll.color))
                         .foregroundStyle(CommunityPoll.graphGradient)
                         .cornerRadius(20)
                         
@@ -97,7 +99,7 @@ struct DashBoard: View {
                     .chartPlotStyle { plotcontent in
                         plotcontent
                             .background(.white.opacity(0.3))
-                            .border(.white, width: 3)
+                            //.border(.white, width: 3)
                         
                     }
                     
@@ -154,10 +156,117 @@ struct DashBoard: View {
         var color: String
         var graphGradient: LinearGradient
     }
+
+struct SettingsSheetView: View {
+    
+    @State private var tapInReminder = false
+    
+    @State private var counselor = ""
+    @State private var Homeroom = ""
+    @State private var secondPeriod = ""
+    @State private var thirdPeriod = ""
+    @State private var fourthPeriod = ""
+    @State private var fifthPeriod = ""
+    @State private var sixthPeriod = ""
+    @State private var seventhPeriod = ""
+    
+    var body: some View {
+        
+        
+        
+        VStack {
+           
+            Text("Settings")
+                .font(.system(size: 40, design: .rounded).weight(.medium))
+                .padding(.bottom, 30)
+            
+            Toggle("Remind me to Tap In", isOn: $tapInReminder)
+                .bold()
+                .padding(.horizontal, 30)
+                .padding(.bottom)
+            
+            VStack(spacing: 3) {
+                
+                Group {
+                    
+                    Text("Counselor")
+                        .font(.callout)
+                        .padding(.trailing, 255)
+                    
+                    TextField("Counselor: Ms. Baker", text: $counselor)
+                        .textFieldStyle(OutlinedTextFieldStyle())
+                        .padding(.horizontal, 15)
+                    
+                    Text("Homeroom")
+                        .font(.callout)
+                        .padding(.trailing, 255)
+                    
+                    TextField("Mrs. Adams", text: $Homeroom)
+                        .textFieldStyle(OutlinedTextFieldStyle())
+                        .padding(.horizontal, 15)
+                    
+                    Text("2nd Period")
+                        .font(.callout)
+                        .padding(.trailing, 255)
+                    
+                    
+                    TextField("Select 2nd Period Teacher", text: $secondPeriod)
+                        .textFieldStyle(OutlinedTextFieldStyle())
+                        .padding(.horizontal, 15)
+                }
+                
+                Group {
+                    
+                    Text("3rd Period")
+                        .font(.callout)
+                        .padding(.trailing, 255)
+                    
+                    TextField("Select 3rd Period Teacher", text: $secondPeriod)
+                        .textFieldStyle(OutlinedTextFieldStyle())
+                        .padding(.horizontal, 15)
+                    
+                    Text("4th Period")
+                        .font(.callout)
+                        .padding(.trailing, 255)
+                    
+                    TextField("Select 4th Period Teacher", text: $fourthPeriod)
+                        .textFieldStyle(OutlinedTextFieldStyle())
+                        .padding(.horizontal, 15)
+                    
+                    Text("5th Period")
+                        .font(.callout)
+                        .padding(.trailing, 255)
+                    
+                    TextField("Select 5th Period Teacher", text: $fifthPeriod)
+                        .textFieldStyle(OutlinedTextFieldStyle())
+                        .padding(.horizontal, 15)
+                    
+//                    Text("6th Period")
+//                        .font(.callout)
+//                        .padding(.trailing, 255)
+//
+//                    TextField("Select 6th Period Teacher", text: $sixthPeriod)
+//                        .textFieldStyle(OutlinedTextFieldStyle())
+//                        .padding(.horizontal, 15)
+//
+//                    Text("7th Period")
+//                        .font(.callout)
+//                        .padding(.trailing, 255)
+//
+//                    TextField("Select 7th Period Teacher", text: $seventhPeriod)
+//                        .textFieldStyle(OutlinedTextFieldStyle())
+//                        .padding(.horizontal, 15)
+                    
+                    
+                }
+                //Spacer()
+            }
+            
+        }
+    }
+}
     
     
-
-
 
 
 extension Color {
