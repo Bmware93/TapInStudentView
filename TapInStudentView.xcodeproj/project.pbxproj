@@ -17,6 +17,10 @@
 		1A26F11929A7FF870034E78F /* DashBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A26F11829A7FF870034E78F /* DashBoard.swift */; };
 		1A26F13729B1A3EB0034E78F /* RequestAchat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A26F13629B1A3EB0034E78F /* RequestAchat.swift */; };
 		1AFD923729BFA047004CFBB2 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFD923629BFA047004CFBB2 /* Color+Extension.swift */; };
+		1AFD923929C2B8B4004CFBB2 /* TapInSurvey1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFD923829C2B8B4004CFBB2 /* TapInSurvey1.swift */; };
+		1AFD923B29C2CB78004CFBB2 /* TapInSurvey2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFD923A29C2CB78004CFBB2 /* TapInSurvey2.swift */; };
+		1AFD923D29C2E01F004CFBB2 /* TapInSurvey3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFD923C29C2E01F004CFBB2 /* TapInSurvey3.swift */; };
+		1AFD923F29C2E648004CFBB2 /* TapInSurvey4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFD923E29C2E648004CFBB2 /* TapInSurvey4.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +35,10 @@
 		1A26F11829A7FF870034E78F /* DashBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoard.swift; sourceTree = "<group>"; };
 		1A26F13629B1A3EB0034E78F /* RequestAchat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestAchat.swift; sourceTree = "<group>"; };
 		1AFD923629BFA047004CFBB2 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		1AFD923829C2B8B4004CFBB2 /* TapInSurvey1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapInSurvey1.swift; sourceTree = "<group>"; };
+		1AFD923A29C2CB78004CFBB2 /* TapInSurvey2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapInSurvey2.swift; sourceTree = "<group>"; };
+		1AFD923C29C2E01F004CFBB2 /* TapInSurvey3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapInSurvey3.swift; sourceTree = "<group>"; };
+		1AFD923E29C2E648004CFBB2 /* TapInSurvey4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapInSurvey4.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +78,10 @@
 				1A26F11629A5B3E60034E78F /* StudentLockScreen.swift */,
 				1A26F11829A7FF870034E78F /* DashBoard.swift */,
 				1A26F13629B1A3EB0034E78F /* RequestAchat.swift */,
+				1AFD923829C2B8B4004CFBB2 /* TapInSurvey1.swift */,
+				1AFD923A29C2CB78004CFBB2 /* TapInSurvey2.swift */,
+				1AFD923C29C2E01F004CFBB2 /* TapInSurvey3.swift */,
+				1AFD923E29C2E648004CFBB2 /* TapInSurvey4.swift */,
 				1AFD923629BFA047004CFBB2 /* Color+Extension.swift */,
 				1A26F10829A2C95A0034E78F /* Assets.xcassets */,
 				1A26F10A29A2C95A0034E78F /* Preview Content */,
@@ -158,6 +170,10 @@
 				1A26F11329A2E40D0034E78F /* OutlinedTextFieldStyle.swift in Sources */,
 				1A26F11729A5B3E60034E78F /* StudentLockScreen.swift in Sources */,
 				1A26F10729A2C9590034E78F /* SignUpScreen.swift in Sources */,
+				1AFD923F29C2E648004CFBB2 /* TapInSurvey4.swift in Sources */,
+				1AFD923D29C2E01F004CFBB2 /* TapInSurvey3.swift in Sources */,
+				1AFD923B29C2CB78004CFBB2 /* TapInSurvey2.swift in Sources */,
+				1AFD923929C2B8B4004CFBB2 /* TapInSurvey1.swift in Sources */,
 				1A26F13729B1A3EB0034E78F /* RequestAchat.swift in Sources */,
 				1A26F10529A2C9590034E78F /* TapInStudentLoginApp.swift in Sources */,
 				1A26F11529A4559E0034E78F /* SplashPage.swift in Sources */,
