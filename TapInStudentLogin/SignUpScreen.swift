@@ -28,35 +28,25 @@ struct SignUpScreen: View {
                 Spacer()
                     .frame(height: 80)
                 
+                Text("Sign Up")
+                    .font(.system(.largeTitle, design: .rounded))
+                    .fontWeight(.semibold)
                 Group {
                     //Need to add tap gesture to dismiss keyboard
-                    Text("Sign Up")
-                        .font(.system(.largeTitle, design: .rounded))
-                        .fontWeight(.semibold)
-                    
                     TextField("First Name", text: $firstName)
-                        .textFieldStyle(OutlinedTextFieldStyle())
-                        .padding(.horizontal, 20)
-                    
+
                     TextField("Last Name", text: $lastName)
-                        .textFieldStyle(OutlinedTextFieldStyle())
-                        .padding(.horizontal, 20)
-                    
+             
                     TextField("Preferred Name", text: $preferredName)
-                        .textFieldStyle(OutlinedTextFieldStyle())
-                        .padding(.horizontal, 20)
-                    
+     
                     TextField("Email", text: $email)
-                        .textFieldStyle(OutlinedTextFieldStyle())
-                        .padding(.horizontal, 20)
-                }
-                
-                Group {
                     
                     TextField("School Code", text: $schoolCode)
-                        .textFieldStyle(OutlinedTextFieldStyle())
-                        .padding(.horizontal, 20)
                 }
+                .textFieldStyle(OutlinedTextFieldStyle())
+                .padding(.horizontal, 20)
+                
+
                 //Tap to continue button
                 Button {
                     print("Button was Tapped")
@@ -70,12 +60,9 @@ struct SignUpScreen: View {
                 
                 .padding(.top)
                 
-                
                 Text("Tap to continue")
                     .font(.footnote)
                     .foregroundColor(.gray)
-                
-                
                 
                 Spacer()
                     .frame(height: 50)
@@ -109,10 +96,6 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-extension Color {
-    static let textFieldBackground = Color("TextFieldColor")
-    static let backgroundColor = Color("TapInPrimary")
-  //  static let tapInGradient = LinearGradient(gradient: Gradient(colors: [Color("Gradiant1"), Color("Gradiant2")]), startPoint: .trailing, endPoint: .leading);)
-}
+
 
 

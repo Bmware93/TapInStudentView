@@ -1,16 +1,13 @@
 //
-//  TapInSurvey3.swift
+//  TapInSurvey2.swift
 //  TapInStudentLogin
 //
-//  Created by Benia Morgan-Ware on 3/16/23.
+//  Created by Benia Morgan-Ware on 3/15/23.
 //
 
 import SwiftUI
 
-struct TapInSurvey3: View {
-    
-    @State var moodSlider: Double = 0
-    
+struct TapInSurvey2: View {
     var body: some View {
         
         ZStack {
@@ -21,35 +18,44 @@ struct TapInSurvey3: View {
                 
                 //Spacer()
                 
-                Text("how do you")
+                Text("how did you")
                     .font(.system(size: 45, design: .rounded).weight(.regular))
                     .foregroundColor(.white)
                     .padding(.top, 35)
                    
                 
-                Text("feel today")
+                Text("sleep")
                     .font(.system(size: 45, design: .rounded).weight(.regular))
                     
                     .foregroundColor(.white)
                     
-                HStack {
-                    Image("surveyImage3")
-                        .resizable()
-                        .scaledToFit()
-                        .padding()
-                    
-                    Image("surveyImage4")
-                        .resizable()
-                        .scaledToFit()
-                        .padding()
-                        .frame(height:238)
-                }
                 
-                Slider(value: $moodSlider, in: 0...10)
-                    .padding(30)
-                    .accentColor(.black)
+                Image("surveyImage2")
+                    .resizable()
+                    .scaledToFit()
+                    .padding(.horizontal, 80)
+                    .padding(.bottom, 20)
                   
-         
+                
+                HStack(alignment: .center, spacing: 50) {
+                    
+                    Button {
+                        print("Button tapped")
+                    } label: {
+                        Image(systemName:"hand.thumbsdown.fill")
+                            .font(.system(size: 60))
+                            .foregroundColor(.black)
+                    }
+                    
+                    Button {
+                        print("Button pressed")
+                    } label: {
+                        Image(systemName:"hand.thumbsup.fill")
+                            .font(.system(size: 60))
+                            .foregroundColor(.white)
+                    }
+                    
+                }
                 Spacer()
                 
                 Button {
@@ -66,14 +72,15 @@ struct TapInSurvey3: View {
                         .font(.title3)
                 }
                 .padding(20)
+                .padding(.bottom)
             }
             
         }
     }
 }
 
-struct TapInSurvey3_Previews: PreviewProvider {
+struct TapInSurvey2_Previews: PreviewProvider {
     static var previews: some View {
-        TapInSurvey3()
+        TapInSurvey2()
     }
 }

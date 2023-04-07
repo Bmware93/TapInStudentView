@@ -17,8 +17,6 @@ struct RequestAchat: View {
     @State  var selectedTeacher: String = ""
     
     var body: some View {
-        
-                
                    VStack {
                         
                         Spacer()
@@ -42,8 +40,6 @@ struct RequestAchat: View {
                                 }
                             }
                        
-                        
-                        
                         Spacer()
                         
                         Button {
@@ -64,8 +60,6 @@ struct RequestAchat: View {
                     }
                 }
             }
-    
-
 
 struct RequestAchat_Previews: PreviewProvider {
     static var previews: some View {

@@ -12,10 +12,12 @@
 		1A26F10929A2C95A0034E78F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A26F10829A2C95A0034E78F /* Assets.xcassets */; };
 		1A26F10C29A2C95A0034E78F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A26F10B29A2C95A0034E78F /* Preview Assets.xcassets */; };
 		1A26F11329A2E40D0034E78F /* OutlinedTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A26F11229A2E40D0034E78F /* OutlinedTextFieldStyle.swift */; };
-		1A26F11529A4559E0034E78F /* SplashPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A26F11429A4559E0034E78F /* SplashPage.swift */; };
+		1A26F11529A4559E0034E78F /* LaunchPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A26F11429A4559E0034E78F /* LaunchPage.swift */; };
 		1A26F11729A5B3E60034E78F /* StudentLockScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A26F11629A5B3E60034E78F /* StudentLockScreen.swift */; };
 		1A26F11929A7FF870034E78F /* DashBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A26F11829A7FF870034E78F /* DashBoard.swift */; };
 		1A26F13729B1A3EB0034E78F /* RequestAchat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A26F13629B1A3EB0034E78F /* RequestAchat.swift */; };
+		1A3C001029DF515100D6582A /* SurveyTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3C000F29DF515100D6582A /* SurveyTabView.swift */; };
+		1A3C001329DF618200D6582A /* 5b20e2f6ee505fc19a5c9921cdc9a6577c8b2952 in Resources */ = {isa = PBXBuildFile; fileRef = 1A3C001229DF618200D6582A /* 5b20e2f6ee505fc19a5c9921cdc9a6577c8b2952 */; };
 		1AFD923729BFA047004CFBB2 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFD923629BFA047004CFBB2 /* Color+Extension.swift */; };
 		1AFD923929C2B8B4004CFBB2 /* TapInSurvey1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFD923829C2B8B4004CFBB2 /* TapInSurvey1.swift */; };
 		1AFD923B29C2CB78004CFBB2 /* TapInSurvey2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFD923A29C2CB78004CFBB2 /* TapInSurvey2.swift */; };
@@ -30,10 +32,12 @@
 		1A26F10829A2C95A0034E78F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A26F10B29A2C95A0034E78F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1A26F11229A2E40D0034E78F /* OutlinedTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutlinedTextFieldStyle.swift; sourceTree = "<group>"; };
-		1A26F11429A4559E0034E78F /* SplashPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPage.swift; sourceTree = "<group>"; };
+		1A26F11429A4559E0034E78F /* LaunchPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchPage.swift; sourceTree = "<group>"; };
 		1A26F11629A5B3E60034E78F /* StudentLockScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLockScreen.swift; sourceTree = "<group>"; };
 		1A26F11829A7FF870034E78F /* DashBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoard.swift; sourceTree = "<group>"; };
 		1A26F13629B1A3EB0034E78F /* RequestAchat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestAchat.swift; sourceTree = "<group>"; };
+		1A3C000F29DF515100D6582A /* SurveyTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyTabView.swift; sourceTree = "<group>"; };
+		1A3C001229DF618200D6582A /* 5b20e2f6ee505fc19a5c9921cdc9a6577c8b2952 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 5b20e2f6ee505fc19a5c9921cdc9a6577c8b2952; sourceTree = "<group>"; };
 		1AFD923629BFA047004CFBB2 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		1AFD923829C2B8B4004CFBB2 /* TapInSurvey1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapInSurvey1.swift; sourceTree = "<group>"; };
 		1AFD923A29C2CB78004CFBB2 /* TapInSurvey2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapInSurvey2.swift; sourceTree = "<group>"; };
@@ -55,7 +59,6 @@
 		1A26F0F829A2C9590034E78F = {
 			isa = PBXGroup;
 			children = (
-				1A26F11229A2E40D0034E78F /* OutlinedTextFieldStyle.swift */,
 				1A26F10329A2C9590034E78F /* TapInStudentLogin */,
 				1A26F10229A2C9590034E78F /* Products */,
 			);
@@ -73,16 +76,15 @@
 			isa = PBXGroup;
 			children = (
 				1A26F10429A2C9590034E78F /* TapInStudentLoginApp.swift */,
-				1A26F11429A4559E0034E78F /* SplashPage.swift */,
+				1A26F11429A4559E0034E78F /* LaunchPage.swift */,
 				1A26F10629A2C9590034E78F /* SignUpScreen.swift */,
 				1A26F11629A5B3E60034E78F /* StudentLockScreen.swift */,
 				1A26F11829A7FF870034E78F /* DashBoard.swift */,
 				1A26F13629B1A3EB0034E78F /* RequestAchat.swift */,
-				1AFD923829C2B8B4004CFBB2 /* TapInSurvey1.swift */,
-				1AFD923A29C2CB78004CFBB2 /* TapInSurvey2.swift */,
-				1AFD923C29C2E01F004CFBB2 /* TapInSurvey3.swift */,
-				1AFD923E29C2E648004CFBB2 /* TapInSurvey4.swift */,
+				1A26F11229A2E40D0034E78F /* OutlinedTextFieldStyle.swift */,
+				1A3C000E29DF4CFD00D6582A /* Survey Onboarding */,
 				1AFD923629BFA047004CFBB2 /* Color+Extension.swift */,
+				1A3C001429DF61A300D6582A /* ProjectFonts */,
 				1A26F10829A2C95A0034E78F /* Assets.xcassets */,
 				1A26F10A29A2C95A0034E78F /* Preview Content */,
 			);
@@ -95,6 +97,26 @@
 				1A26F10B29A2C95A0034E78F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1A3C000E29DF4CFD00D6582A /* Survey Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				1A3C000F29DF515100D6582A /* SurveyTabView.swift */,
+				1AFD923829C2B8B4004CFBB2 /* TapInSurvey1.swift */,
+				1AFD923A29C2CB78004CFBB2 /* TapInSurvey2.swift */,
+				1AFD923C29C2E01F004CFBB2 /* TapInSurvey3.swift */,
+				1AFD923E29C2E648004CFBB2 /* TapInSurvey4.swift */,
+			);
+			path = "Survey Onboarding";
+			sourceTree = "<group>";
+		};
+		1A3C001429DF61A300D6582A /* ProjectFonts */ = {
+			isa = PBXGroup;
+			children = (
+				1A3C001229DF618200D6582A /* 5b20e2f6ee505fc19a5c9921cdc9a6577c8b2952 */,
+			);
+			path = ProjectFonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +177,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A3C001329DF618200D6582A /* 5b20e2f6ee505fc19a5c9921cdc9a6577c8b2952 in Resources */,
 				1A26F10C29A2C95A0034E78F /* Preview Assets.xcassets in Resources */,
 				1A26F10929A2C95A0034E78F /* Assets.xcassets in Resources */,
 			);
@@ -176,9 +199,10 @@
 				1AFD923929C2B8B4004CFBB2 /* TapInSurvey1.swift in Sources */,
 				1A26F13729B1A3EB0034E78F /* RequestAchat.swift in Sources */,
 				1A26F10529A2C9590034E78F /* TapInStudentLoginApp.swift in Sources */,
-				1A26F11529A4559E0034E78F /* SplashPage.swift in Sources */,
+				1A26F11529A4559E0034E78F /* LaunchPage.swift in Sources */,
 				1A26F11929A7FF870034E78F /* DashBoard.swift in Sources */,
 				1AFD923729BFA047004CFBB2 /* Color+Extension.swift in Sources */,
+				1A3C001029DF515100D6582A /* SurveyTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

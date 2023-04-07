@@ -6,3 +6,14 @@
 //
 
 import Foundation
+import SwiftUI
+
+extension Color {
+    static let textFieldBackground = Color("TextFieldColor")
+    static let backgroundColor = Color("TapInPrimary")
+    static let brandGradientLight = Color("Gradiant1")
+    static let brandGradientlight2 = Color("Gradiant2")
+
+}
+
+

@@ -16,13 +16,10 @@ struct TapInSurvey4: View {
             
             VStack {
                 
-                //Spacer()
-                
                 Text("this or that")
                     .font(.system(size: 45, design: .rounded).weight(.regular))
                     .foregroundColor(.white)
                     .padding(.top, 35)
-                   
                     
                 HStack {
                     Image("surveyImage3")
@@ -37,9 +34,6 @@ struct TapInSurvey4: View {
                         .frame(height:238)
                 }
                 
-  
-                  
-         
                 Spacer()
                 
                 Button {
@@ -56,6 +50,7 @@ struct TapInSurvey4: View {
                         .font(.title3)
                 }
                 .padding(20)
+                .padding(.bottom)
             }
             
         }

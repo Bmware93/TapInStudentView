@@ -13,7 +13,10 @@ struct StudentLockScreen: View {
         NavigationStack{
             
             Home()
+            
+             
         }
+        
     }
 }
 
@@ -28,27 +31,29 @@ struct Home : View {
             
             Color.brandGradientlight2
                 .ignoresSafeArea(.all)
+       
             
             // Lockscreen...
             
             if unLocked {
                 
-                Text("App Unlocked")
-                    .font(.title2)
-                    .fontWeight(.heavy)
+               DashBoard()
             }
             else{
                 
                 LockScreen(unLocked: $unLocked)
+            
             }
         }
         //.preferredColorScheme(unLocked ? .light : .dark)
+    
     }
 }
 
 struct LockScreen : View {
     
     @State var password = ""
+    @State private var forgotPasswordSheetShowing = false
     // you can change it when user clicks reset password....
     // AppStorage => UserDefaults....
     @AppStorage("lock_Password") var key = "5654"
@@ -59,52 +64,19 @@ struct LockScreen : View {
     var body: some View{
         
         VStack{
-            
+         
+            Spacer()
+          
             Spacer()
             
-            HStack{
-                
-                Spacer(minLength: 0)
-                
-                Menu(content: {
-                    
-                    Label(
-                        title: { Text("Help") },
-                        icon: { Image(systemName: "info.circle.fill") })
-                        .onTapGesture(perform: {
-                            // perform actions...
-                        })
-                    
-                    Label(
-                        title: { Text("Reset Password") },
-                        icon: { Image(systemName: "key.fill") })
-                        .onTapGesture(perform: {
-                            
-                        })
-                    
-                }) {
-                    
-                    Image(systemName: "info.circle.fill")
-                        .renderingMode(.template)
-                        .resizable()
-                        .frame(width: 19, height: 19)
-                        .foregroundColor(.black)
-                        .padding()
-                }
-            }
-            .padding(.leading)
-            
-            Image("TapInLogo")
-                .resizable()
-                .frame(width: 100, height: 95)
-                .padding(.top,20)
-            
+      
             Text("Enter Passcode")
-                .font(.title2)
-                .fontWeight(.heavy)
-                .padding(.top,20)
+                .font(.title3)
+                .fontWeight(.bold)
+        
             
-            HStack(spacing: 20){
+            HStack(spacing: 6){
+            
                 
                 // Password Circle View...
                 
@@ -118,13 +90,12 @@ struct LockScreen : View {
             
             // KeyPad....
             
-            Spacer(minLength: 0)
+            //Spacer(minLength: 0)
             
             Text(wrongPassword ? "Incorrect Pin" : "")
                 .foregroundColor(.red)
                 .fontWeight(.heavy)
             
-            Spacer(minLength: 0)
             
             LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 3),spacing: height < 750 ? 10 : 15){
                 
@@ -142,15 +113,32 @@ struct LockScreen : View {
             }
             Spacer()
                 .frame(height: 40)
-            .padding(.bottom)
 
+            
+            Button {
+                forgotPasswordSheetShowing.toggle()
+            } label: {
+                Text("Forgot Passcode")
+                    .foregroundColor(.black)
+                    .bold()
+            }
+  
+            Spacer()
         }
+        .padding(.horizontal, 45)
         
+        .sheet(isPresented: $forgotPasswordSheetShowing) {
+            Text("Hello")
+                .presentationDetents([.medium])
+                .presentationDragIndicator(.visible)
+        }
+       
         
+      
         .navigationTitle("")
         .navigationBarHidden(true)
     }
-    
+ 
 }
 
 struct PasswordView : View {
@@ -162,9 +150,11 @@ struct PasswordView : View {
         
         ZStack{
             
-            RoundedRectangle(cornerRadius: 3)
-                .stroke(Color.black,lineWidth: 2)
-                .frame(width: 50, height: 50)
+            RoundedRectangle(cornerRadius: 8)
+                .fill(Color.white)
+                .opacity(0.3)
+                .frame(width: 70, height: 70)
+                .padding(.bottom)
                 
             
             // checking whether it is typed...
@@ -173,10 +163,15 @@ struct PasswordView : View {
                 
                 Circle()
                     .fill(Color.black)
-                    .frame(width: 30, height: 30)
+                    .frame(width: 20, height: 20)
+            } else {
+                Circle()
+                    .stroke(.black, lineWidth: 2)
+                    .frame(width: 15, height: 20)
             }
         }
     }
+    
 }
 
 struct PasswordButton : View {
@@ -191,7 +186,7 @@ struct PasswordButton : View {
         
         Button(action: setPassword, label: {
             
-            VStack{
+            VStack {
                 
                 if value.count > 1{
                     
@@ -202,22 +197,30 @@ struct PasswordButton : View {
                         .foregroundColor(.black)
                 }
                 else{
-                    ZStack{
-                        
-                        Circle()
-                            .stroke(.black, lineWidth: 2)
-                            .frame(width: 150, height: 60)
-                        
-                        Text(value)
-                            .font(.title)
-                            .foregroundColor(.black)
                     
-                    }
+                    ZStack(alignment: .center){
+                     
+                            Circle()
+                                .stroke(.black, lineWidth: 2)
+                                .frame(width: 150, height: 60)
+                            
+                            Text(value)
+                                .font(.title)
+                                .foregroundColor(.black)
+                        }
+                     
+                        .padding(.top, -10)
+                   
                 }
             }
-            .padding()
+            
+         
+            .padding(15)
+            
+        
 
         })
+      
     }
     
     func setPassword(){

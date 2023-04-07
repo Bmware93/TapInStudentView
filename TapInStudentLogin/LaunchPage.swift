@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SplashPage: View {
+struct LaunchPage: View {
     
     var body: some View {
         
@@ -39,10 +39,12 @@ struct SplashPage: View {
                     HStack(spacing: 10) {
                         
                         Text("Don't have an account?")
-                            .foregroundColor(.gray)
+                            .foregroundStyle(.secondary)
+                            .padding(.top)
                         
                         NavigationLink("Sign Up", destination: SignUpScreen())
                             .foregroundColor(Color("Gradiant1"))
+                            .padding(.top)
                             
                     }
                     Spacer()
@@ -57,6 +59,6 @@ struct SplashPage: View {
 
 struct SplashPage_Previews: PreviewProvider {
     static var previews: some View {
-        SplashPage()
+        LaunchPage()
     }
 }
