@@ -31,7 +31,7 @@ struct LaunchPage: View {
                             .frame(minWidth: 0, maxWidth: 300)
                             .padding()
                             .foregroundColor(.white)
-                            .background(LinearGradient(gradient: Gradient(colors: [Color("Gradiant1"), Color("Gradiant2")]), startPoint: .trailing, endPoint: .leading))
+                            .background(LinearGradient(gradient: Gradient(colors: [Color("ButtonColor2"), Color("ButtonColor1")]), startPoint: .trailing, endPoint: .leading))
                             .cornerRadius(40)
                             .font(.title3)
                     }
@@ -43,7 +43,7 @@ struct LaunchPage: View {
                             .padding(.top)
                         
                         NavigationLink("Sign Up", destination: SignUpScreen())
-                            .foregroundColor(Color("Gradiant1"))
+                            .foregroundColor(Color("ButtonColor2"))
                             .padding(.top)
                             
                     }

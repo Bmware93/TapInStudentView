@@ -16,13 +16,6 @@ struct DashBoard: View {
     @State private var settingsSheetShowing  = false
     
     
-    //MARK: Survey poll data
-    var data: [CommunityPoll] = [
-        .init(activity: "Swimming", studentCount: 100, color: "Swimming", graphGradient: LinearGradient(colors: [.brandGradientLight, .brandGradientlight2], startPoint: .leading, endPoint: .trailing)),
-        .init(activity: "Running", studentCount: 40, color: "Running", graphGradient: LinearGradient(colors: [.gray, .secondary], startPoint: .leading, endPoint: .trailing))
-    ]
-    
-    
     var body: some View {
         
         NavigationStack {
@@ -78,18 +71,12 @@ struct DashBoard: View {
                     
                     Spacer()
                     
-                    //MARK: Survey Section
                     Text("Community Poll")
                         .font(.title2)
                         .padding(.top, 30)
+                        
                     
-                    communityPollChart(data: data)
-                        .chartPlotStyle { plotcontent in
-                            plotcontent
-                                .background(.white.opacity(0.3))
-                            //.border(.white, width: 3)
-                            
-                        }
+                    PollChartView()
                     
                     Spacer()
                     
@@ -106,7 +93,7 @@ struct DashBoard: View {
                             .padding()
                             .padding(.horizontal, -15)
                             .foregroundColor(.white)
-                            .background(LinearGradient(gradient: Gradient(colors: [Color("Gradiant1"), Color("Gradiant2")]), startPoint: .trailing, endPoint: .leading))
+                            .background(LinearGradient(gradient: Gradient(colors: [Color("ButtonColor2"), Color("ButtonColor1")]), startPoint: .trailing, endPoint: .leading))
                             .cornerRadius(40)
                             .font(.title3)
                     }
@@ -116,9 +103,7 @@ struct DashBoard: View {
                         .bold()
                         .foregroundColor(.brandGradientLight)
                         .padding(.top)
-                    
                 }
-                
                 
             }
             .sheet(isPresented: $tapInSheetShowing) {
@@ -130,18 +115,7 @@ struct DashBoard: View {
         }
     }
     
-    @ViewBuilder
-    func communityPollChart(data: [CommunityPoll]) -> some View {
-        Chart(data) { CommunityPoll in
-            BarMark(x: .value("Number of Students", CommunityPoll.studentCount),
-                    y: .value("Activity", CommunityPoll.activity))
-            .foregroundStyle(CommunityPoll.graphGradient)
-            .cornerRadius(20)
-        }
-        .chartForegroundStyleScale(["Swimming":.blue, "Running": .gray])
-        .chartXAxis(.hidden)
-        .frame(width: 333, height: 130)
-    }
+
 }
 
 struct SignInScreen_Previews: PreviewProvider {
@@ -150,119 +124,12 @@ struct SignInScreen_Previews: PreviewProvider {
     }
 }
 
-struct CommunityPoll: Identifiable {
-    var id = UUID()
-    var activity: String
-    var studentCount: Int
-    var color: String
-    var graphGradient: LinearGradient
-}
 
-struct SettingsSheetView: View {
-    
-    @State private var tapInReminder = false
-    
-    @State private var counselor = ""
-    @State private var Homeroom = ""
-    @State private var secondPeriod = ""
-    @State private var thirdPeriod = ""
-    @State private var fourthPeriod = ""
-    @State private var fifthPeriod = ""
-    @State private var sixthPeriod = ""
-    @State private var seventhPeriod = ""
-    
-    var body: some View {
-        VStack {
+
+
             
-            Text("Settings")
-                .font(.system(size: 40, design: .rounded).weight(.medium))
-                .padding(.bottom, 30)
-            
-            Toggle("Remind me to Tap In", isOn: $tapInReminder)
-                .bold()
-                .padding(.horizontal, 30)
-                .padding(.bottom)
-            
-            VStack(spacing: 3) {
-                
-                Group {
-                    
-                    Text("Counselor")
-                        .font(.callout)
-                        .padding(.trailing, 255)
-                    
-                    TextField("Counselor: Ms. Baker", text: $counselor)
-                        .textFieldStyle(OutlinedTextFieldStyle())
-                        .padding(.horizontal, 15)
-                    
-                    Text("Homeroom")
-                        .font(.callout)
-                        .padding(.trailing, 255)
-                    
-                    TextField("Mrs. Adams", text: $Homeroom)
-                        .textFieldStyle(OutlinedTextFieldStyle())
-                        .padding(.horizontal, 15)
-                    
-                    Text("2nd Period")
-                        .font(.callout)
-                        .padding(.trailing, 255)
-                    
-                    
-                    TextField("Select 2nd Period Teacher", text: $secondPeriod)
-                        .textFieldStyle(OutlinedTextFieldStyle())
-                        .padding(.horizontal, 15)
-                }
-                
-                Group {
-                    
-                    Text("3rd Period")
-                        .font(.callout)
-                        .padding(.trailing, 255)
-                    
-                    TextField("Select 3rd Period Teacher", text: $secondPeriod)
-                        .textFieldStyle(OutlinedTextFieldStyle())
-                        .padding(.horizontal, 15)
-                    
-                    Text("4th Period")
-                        .font(.callout)
-                        .padding(.trailing, 255)
-                    
-                    TextField("Select 4th Period Teacher", text: $fourthPeriod)
-                        .textFieldStyle(OutlinedTextFieldStyle())
-                        .padding(.horizontal, 15)
-                    
-                    Text("5th Period")
-                        .font(.callout)
-                        .padding(.trailing, 255)
-                    
-                    TextField("Select 5th Period Teacher", text: $fifthPeriod)
-                        .textFieldStyle(OutlinedTextFieldStyle())
-                        .padding(.horizontal, 15)
-                    
-                    //                    Text("6th Period")
-                    //                        .font(.callout)
-                    //                        .padding(.trailing, 255)
-                    //
-                    //                    TextField("Select 6th Period Teacher", text: $sixthPeriod)
-                    //                        .textFieldStyle(OutlinedTextFieldStyle())
-                    //                        .padding(.horizontal, 15)
-                    //
-                    //                    Text("7th Period")
-                    //                        .font(.callout)
-                    //                        .padding(.trailing, 255)
-                    //
-                    //                    TextField("Select 7th Period Teacher", text: $seventhPeriod)
-                    //                        .textFieldStyle(OutlinedTextFieldStyle())
-                    //                        .padding(.horizontal, 15)
-                    
-                    
-                }
-                //Spacer()
-            }
-            
-        }
-    }
-}
+        
+
 
 
 

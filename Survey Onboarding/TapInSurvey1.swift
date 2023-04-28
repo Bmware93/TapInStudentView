@@ -22,6 +22,7 @@ struct TapInSurvey1: View {
                     
                     Text("did you eat breakfast")
                         .font(.system(size: 48, design: .rounded).weight(.regular))
+                        .multilineTextAlignment(.center)
                         .foregroundColor(.white)
                         .padding(.top, 40)
                     
@@ -61,7 +62,7 @@ struct TapInSurvey1: View {
                             .frame(minWidth: 0, maxWidth: 300)
                             .padding()
                             .padding(.horizontal, -15)
-                            .foregroundColor(Color("Gradiant1"))
+                            .foregroundColor(Color("ButtonColor2"))
                             .background(Color.white)
                             .font(.system(size: 20, weight: .medium))
                             .cornerRadius(40)

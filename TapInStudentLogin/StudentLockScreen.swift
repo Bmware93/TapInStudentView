@@ -75,7 +75,7 @@ struct LockScreen : View {
                 .fontWeight(.bold)
         
             
-            HStack(spacing: 6){
+            HStack(spacing: 4){
             
                 
                 // Password Circle View...
@@ -125,15 +125,17 @@ struct LockScreen : View {
   
             Spacer()
         }
-        .padding(.horizontal, 45)
+        .padding(.horizontal, 50)
         
         .sheet(isPresented: $forgotPasswordSheetShowing) {
-            Text("Hello")
+            Text("Forgot Passcode")
+                .font(.system(size: 36, design: .rounded) .weight (.semibold))
+                .padding(.bottom)
+            
+            
                 .presentationDetents([.medium])
                 .presentationDragIndicator(.visible)
         }
-       
-        
       
         .navigationTitle("")
         .navigationBarHidden(true)

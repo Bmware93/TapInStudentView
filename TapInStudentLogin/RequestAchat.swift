@@ -51,7 +51,7 @@ struct RequestAchat: View {
                                 .padding()
                                 .padding(.horizontal, -15)
                                 .foregroundColor(.white)
-                                .background(LinearGradient(gradient: Gradient(colors: [Color("Gradiant1"), Color("Gradiant2")]), startPoint: .trailing, endPoint: .leading))
+                                .background(LinearGradient(gradient: Gradient(colors: [Color("ButtonColor2"), Color("ButtonColor1")]), startPoint: .trailing, endPoint: .leading))
                                 .cornerRadius(40)
                                 .font(.title3)
                                 .padding(.bottom, 30)

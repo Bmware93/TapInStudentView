@@ -11,8 +11,8 @@ import SwiftUI
 extension Color {
     static let textFieldBackground = Color("TextFieldColor")
     static let backgroundColor = Color("TapInPrimary")
-    static let brandGradientLight = Color("Gradiant1")
-    static let brandGradientlight2 = Color("Gradiant2")
+    static let brandGradientLight = Color("ButtonColor2")
+    static let brandGradientlight2 = Color("ButtonColor1")
 
 }
 

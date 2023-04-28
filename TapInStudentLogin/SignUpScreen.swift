@@ -74,7 +74,7 @@ struct SignUpScreen: View {
                         .foregroundColor(.secondary)
                     
                     NavigationLink("Sign In", destination: StudentLockScreen())
-                        .foregroundColor(Color("Gradiant1"))
+                        .foregroundColor(Color("ButtonColor2"))
                 }
                 Spacer()
                     .frame(height: 80)

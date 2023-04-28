@@ -1,13 +1,16 @@
 //
-//  TapInSurvey2.swift
+//  TapInSurvey3.swift
 //  TapInStudentLogin
 //
-//  Created by Benia Morgan-Ware on 3/15/23.
+//  Created by Benia Morgan-Ware on 3/16/23.
 //
 
 import SwiftUI
 
-struct TapInSurvey2: View {
+struct TapInSurvey3: View {
+    
+    @State var moodSlider: Double = 0
+    
     var body: some View {
         
         ZStack {
@@ -18,44 +21,35 @@ struct TapInSurvey2: View {
                 
                 //Spacer()
                 
-                Text("how did you")
+                Text("how do you")
                     .font(.system(size: 45, design: .rounded).weight(.regular))
                     .foregroundColor(.white)
                     .padding(.top, 35)
                    
                 
-                Text("sleep")
+                Text("feel today")
                     .font(.system(size: 45, design: .rounded).weight(.regular))
                     
                     .foregroundColor(.white)
                     
-                
-                Image("surveyImage2")
-                    .resizable()
-                    .scaledToFit()
-                    .padding(.horizontal, 80)
-                    .padding(.bottom, 20)
-                  
-                
-                HStack(alignment: .center, spacing: 50) {
+                HStack {
+                    Image("surveyImage3")
+                        .resizable()
+                        .scaledToFit()
+                        .padding()
                     
-                    Button {
-                        print("Button tapped")
-                    } label: {
-                        Image(systemName:"hand.thumbsdown.fill")
-                            .font(.system(size: 60))
-                            .foregroundColor(.black)
-                    }
-                    
-                    Button {
-                        print("Button pressed")
-                    } label: {
-                        Image(systemName:"hand.thumbsup.fill")
-                            .font(.system(size: 60))
-                            .foregroundColor(.white)
-                    }
-                    
+                    Image("surveyImage4")
+                        .resizable()
+                        .scaledToFit()
+                        .padding()
+                        .frame(height:238)
                 }
+                
+                Slider(value: $moodSlider, in: 0...10)
+                    .padding(30)
+                    .accentColor(.black)
+                  
+         
                 Spacer()
                 
                 Button {
@@ -65,7 +59,7 @@ struct TapInSurvey2: View {
                         .frame(minWidth: 0, maxWidth: 300)
                         .padding()
                         .padding(.horizontal, -15)
-                        .foregroundColor(Color("Gradiant1"))
+                        .foregroundColor(Color("ButtonColor2"))
                         .background(Color.white)
                         .font(.system(size: 20, weight: .medium))
                         .cornerRadius(40)
@@ -79,8 +73,8 @@ struct TapInSurvey2: View {
     }
 }
 
-struct TapInSurvey2_Previews: PreviewProvider {
+struct TapInSurvey3_Previews: PreviewProvider {
     static var previews: some View {
-        TapInSurvey2()
+        TapInSurvey3()
     }
 }

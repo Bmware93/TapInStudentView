@@ -43,7 +43,7 @@ struct TapInSurvey4: View {
                         .frame(minWidth: 0, maxWidth: 300)
                         .padding()
                         .padding(.horizontal, -15)
-                        .foregroundColor(Color("Gradiant1"))
+                        .foregroundColor(Color("ButtonColor2"))
                         .background(Color.white)
                         .font(.system(size: 20, weight: .medium))
                         .cornerRadius(40)
