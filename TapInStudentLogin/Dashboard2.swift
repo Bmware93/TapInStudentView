@@ -79,14 +79,14 @@ struct DashBoard2: View {
                             Text("Do you like swimming?")
                                 .font(.system(size: 20))
                             
-                            HStack(alignment: .center, spacing: 50){
+                            HStack(alignment: .center, spacing: 60){
                                 
                                 Button {
                                     
                                 } label: {
                                     Image(systemName: "hand.thumbsup.fill")
                                         .foregroundColor(.brandGradientLight)
-                                        .padding(.leading, 30)
+                                        .padding(.leading, 40)
                                     
                                 }
                                 
